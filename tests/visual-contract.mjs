@@ -23,11 +23,12 @@ for (const label of ["Recent events","Active session","Quick actions"]) {
 }
 assert.doesNotMatch(hero,/\b\d+\s*(users|customers|active sessions|connected devices)\b/i,"Hero must not present fabricated aggregate usage");
 
+const normalizedHtml=html.replaceAll("&amp;","&");
 for (const label of [
   "Computers & devices","Servers","AI agents","Applications",
   "Cloud services","Automations","APIs / tools"
 ]) {
-  assert.ok(html.toLowerCase().includes(label.toLowerCase()),"Missing system category: "+label);
+  assert.ok(normalizedHtml.toLowerCase().includes(label.toLowerCase()),"Missing system category: "+label);
 }
 assert.doesNotMatch(html,/glass-card/i);
 assert.doesNotMatch(html,/testimonial/i);
