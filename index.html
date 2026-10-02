@@ -133,7 +133,7 @@ waiting for next task…</pre>
           <strong>Servers</strong><span>remote runtimes</span>
         </div>
         <div class="system-item">
-          <span class="system-icon" aria-hidden="true"><rect x="5" y="7" width="14" height="11" rx="3"/><path d="M9 11h.01M15 11h.01M9 15h6M12 7V4M9 4h6"/></svg></span>
+          <span class="system-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="11" rx="3"/><path d="M9 11h.01M15 11h.01M9 15h6M12 7V4M9 4h6"/></svg></span>
           <strong>AI agents</strong><span>long-running agent work</span>
         </div>
         <div class="system-item">
@@ -156,16 +156,208 @@ waiting for next task…</pre>
       <p class="system-disclaimer">These categories show the intended platform boundary; they do not imply every connector is available today.</p>
     </section>
 
-    <section id="what-it-does" class="section"><div class="shell status-placeholder"><p class="section-kicker">What it does</p><h2>Monitor. Control. Keep work moving.</h2><p>Detailed product explanation follows below.</p></div></section>
-    <section id="how-it-works" class="section"><div class="shell status-placeholder"><p class="section-kicker">How it works</p><h2>Connect. Observe. Act.</h2><p>Connect supported systems, understand activity, then take a controlled action when needed.</p></div></section>
-    <section id="features" class="section"><div class="shell status-placeholder"><p class="section-kicker">Features</p><h2>Built around operational context.</h2><p>Feature detail follows in the product-status section.</p></div></section>
-    <section id="roadmap" class="section"><div class="shell">
-      <section id="available" class="status-placeholder"><h2>Available foundation</h2><p>Account, device, session, pairing, and rate-limiting foundations are present in the current codebase.</p></section>
-      <section id="in-development" class="status-placeholder"><h2>In development</h2><p>Realtime visibility, remote-control surfaces, richer device management, summaries, recovery, dashboards, and notifications are still being built.</p></section>
-      <section id="future" class="status-placeholder"><h2>Future</h2><p>Broader source-agnostic connectors and orchestration remain platform direction rather than shipped capability.</p></section>
-    </div></section>
-    <section id="use-cases" class="section"><div class="shell status-placeholder"><p class="section-kicker">Use cases</p><h2>Stay in the loop when work keeps running.</h2></div></section>
-    <section id="early-access" class="section"><div class="shell status-placeholder"><p class="section-kicker">Early access</p><h2>Join early access</h2><p>The embedded external signup form will live here.</p></div></section>
+    <section id="what-it-does" class="section">
+      <div class="shell work-grid">
+        <div class="terminal-window" aria-label="Illustrative terminal and event activity">
+          <div class="window-bar">
+            <span class="window-title">workspace · activity</span>
+            <div class="window-tabs"><span class="active">Terminal</span><span>Events</span><span>Summary</span></div>
+          </div>
+          <pre class="terminal-large"><span class="prompt">dev@workstation:~/project $</span> npm run build
+<span class="dim">› compiling application</span>
+<span class="ok">✓ compiled successfully</span>
+<span class="ok">✓ checks completed</span>
+
+<span class="event-line">EVENT</span> build.completed
+<span class="dim">source: workstation · project workspace</span>
+
+<span class="prompt">dev@workstation:~/project $</span> <span class="cursor">▋</span></pre>
+        </div>
+        <div class="work-copy">
+          <p class="section-kicker">What it does</p>
+          <h2>Monitor. Control. Keep work moving.</h2>
+          <p>
+            DevRunX is being built for work that continues after you leave the screen. Observe activity,
+            understand when something changes, inspect the useful context, and take a controlled action
+            without returning to the originating machine.
+          </p>
+          <div class="capability-lines">
+            <div><span>01</span><strong>See activity</strong><p>Bring relevant process, session, and event state into one operational view.</p></div>
+            <div><span>02</span><strong>Understand change</strong><p>Surface the event or state transition that actually needs attention.</p></div>
+            <div><span>03</span><strong>Take action</strong><p>Move from visibility to an intentional, controlled response when the system supports it.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section process-section">
+      <div class="shell">
+        <div class="section-heading-row">
+          <div>
+            <p class="section-kicker">How it works</p>
+            <h2>Connect. Observe. Act.</h2>
+          </div>
+          <p>DevRunX is designed around a simple operating loop rather than another dashboard you have to babysit.</p>
+        </div>
+        <div class="process-rail" aria-label="DevRunX operating loop">
+          <article class="process-step">
+            <div class="process-node">01</div>
+            <div><h3>Connect</h3><p>Add a device or supported system and establish an authenticated relationship.</p></div>
+          </article>
+          <article class="process-step">
+            <div class="process-node">02</div>
+            <div><h3>Observe</h3><p>Receive real-time or near-real-time activity, events, state, and useful summaries.</p></div>
+          </article>
+          <article class="process-step">
+            <div class="process-node active">03</div>
+            <div><h3>Act</h3><p>Run an approved action or command when intervention is actually needed.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section signal-section">
+      <div class="shell signal-layout">
+        <div>
+          <p class="section-kicker">Product principle</p>
+          <h2>Context before control.</h2>
+        </div>
+        <div class="signal-copy">
+          <p>
+            Remote control without context is risky and noisy. DevRunX is being shaped around understanding the state
+            of work first, then exposing the smallest useful action.
+          </p>
+          <dl class="signal-list">
+            <div><dt>State</dt><dd>What is running, waiting, completed, stopped, or needs attention.</dd></div>
+            <div><dt>Events</dt><dd>What changed and when, without forcing you to watch a live terminal continuously.</dd></div>
+            <div><dt>Actions</dt><dd>Controlled intervention tied to the session, device, and context that produced it.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section roadmap-section">
+      <div class="shell">
+        <div class="section-heading-row roadmap-head">
+          <div>
+            <p class="section-kicker">Product status</p>
+            <h2>What exists — and what does not yet.</h2>
+          </div>
+          <p>The boundaries below are intentional. A data model or planned connector is not presented as a finished product surface.</p>
+        </div>
+
+        <div class="status-columns">
+          <section id="available" class="status-column available">
+            <div class="status-head"><span class="status-mark"></span><div><span class="status-label">Current codebase</span><h3>Available foundation</h3></div></div>
+            <p>Core identity and device/session foundations are present today:</p>
+            <ul>
+              <li>Account registration/login foundation</li>
+              <li>Web account and profile surface</li>
+              <li>Device and session model</li>
+              <li>Time-limited pairing-code flow</li>
+              <li>Terminal-device pairing</li>
+              <li>Terminal-device session/token issuance</li>
+              <li>Role-aware device model</li>
+              <li>Backend rate-limiting foundations</li>
+            </ul>
+          </section>
+
+          <section id="in-development" class="status-column developing">
+            <div class="status-head"><span class="status-mark"></span><div><span class="status-label">Being built</span><h3>In development</h3></div></div>
+            <p>The operational experience is still being completed and verified:</p>
+            <ul>
+              <li>Real-time session visibility</li>
+              <li>Terminal/event streaming</li>
+              <li>Richer device management</li>
+              <li>Controlled remote actions</li>
+              <li>Audit-log user experience</li>
+              <li>AI-generated session/event summaries</li>
+              <li>Robust reconnect/recovery behavior</li>
+              <li>Operational dashboard views</li>
+              <li>Notification workflows</li>
+            </ul>
+          </section>
+
+          <section id="future" class="status-column future">
+            <div class="status-head"><span class="status-mark"></span><div><span class="status-label">Platform direction</span><h3>Future</h3></div></div>
+            <p>These describe the broader source-agnostic platform direction, not current connector availability:</p>
+            <ul>
+              <li>Broad AI-agent connectors</li>
+              <li>Application connectors</li>
+              <li>Cloud-service connectors</li>
+              <li>Automation connectors</li>
+              <li>Cross-system orchestration</li>
+              <li>Richer notification channels</li>
+              <li>Policy-driven action approval</li>
+              <li>Broader source-agnostic remote execution/control</li>
+              <li>Team-oriented operational workflows</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="use-cases" class="section">
+      <div class="shell">
+        <div class="section-heading-row">
+          <div><p class="section-kicker">Use cases</p><h2>For the work that keeps going.</h2></div>
+          <p>The point is not to stare at another console. It is to know when long-running work needs you — and when it does not.</p>
+        </div>
+        <div class="use-case-list">
+          <article><span>01</span><h3>A build is still running after you leave your desk.</h3><p>Check its state and the useful output without reopening the original workstation.</p></article>
+          <article><span>02</span><h3>An AI agent needs attention.</h3><p>See that the run changed state and inspect the context before deciding what to do next.</p></article>
+          <article><span>03</span><h3>A server process exits unexpectedly.</h3><p>Surface the event and make the supported recovery path easier to reach.</p></article>
+          <article><span>04</span><h3>A long-running task finishes.</h3><p>Know that the job completed instead of repeatedly checking the machine that started it.</p></article>
+          <article><span>05</span><h3>A deployment or automation changes state.</h3><p>Bring the transition into the same operational context as the systems around it.</p></article>
+          <article><span>06</span><h3>You are away from the originating machine.</h3><p>Keep enough visibility to understand what is happening while the work continues elsewhere.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section architecture-section">
+      <div class="shell">
+        <div class="section-heading-row">
+          <div><p class="section-kicker">Architecture at a glance</p><h2>Connected systems. One operational loop.</h2></div>
+          <p>This is a public product-level view. It intentionally omits private implementation and infrastructure details.</p>
+        </div>
+        <div class="architecture-map" role="img" aria-label="Connected systems send events and state through DevRunX to a user who can take controlled actions">
+          <div class="source-stack">
+            <span>Laptop / Desktop</span>
+            <span>Server</span>
+            <span>AI Agent</span>
+            <span>Application</span>
+            <span>Cloud Service</span>
+            <span>Automation</span>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-core">DevRun<span>X</span></div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-flow">
+            <span>Events / state</span>
+            <b aria-hidden="true">↓</b>
+            <span>User</span>
+            <b aria-hidden="true">↓</b>
+            <span class="action-node">Controlled actions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="early-access" class="section early-access-section">
+      <div class="shell early-access-shell">
+        <div>
+          <p class="section-kicker">Early access</p>
+          <h2>Help shape what DevRunX becomes.</h2>
+          <p>Early access is for people running work that continues when they are no longer in front of the machine — developers, founders, DevOps operators, and people working with AI agents.</p>
+        </div>
+        <div class="form-awaiting" aria-label="Early access form integration">
+          <span class="form-state">External form</span>
+          <strong>Join early access</strong>
+          <p>The Tally signup will collect Email and Role, with optional Name and “What would you want DevRunX to monitor or control?”</p>
+          <p class="form-note">Responses will be handled by the external form provider; this static overview site does not store submissions.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer><div class="shell">DevRunX · Public product overview · Platform under active development</div></footer>
