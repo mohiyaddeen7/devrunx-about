@@ -17,3 +17,5 @@ jobs:
         run: node tests/product-truth-contract.mjs
       - name: Verify architecture
         run: node tests/architecture-contract.mjs
+      - name: Verify visual contract
+        run: node tests/visual-contract.mjs
