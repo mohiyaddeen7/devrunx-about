@@ -10,7 +10,9 @@ assert.match(css,/--bg:\s*#0[0-9a-f]{5}/i,"Dark near-black background token requ
 assert.match(css,/--text:\s*#[ef][0-9a-f]{5}/i,"High-contrast foreground token required");
 assert.match(css,/--accent:\s*#[0-9a-f]{6}/i,"Electric-blue accent token required");
 
-const hero=html.match(/<section[^>]+class=["'][^"']*hero[^"']*["'][\s\S]*?<\/section>/i)?.[0] ?? "";
+const heroStart=html.search(/<section[^>]+class=["'][^"']*hero[^"']*["']/i);
+const heroEnd=html.indexOf('<section class="system-strip"',heroStart);
+const hero=heroStart>=0 && heroEnd>heroStart ? html.slice(heroStart,heroEnd) : "";
 const heroLinks=[...hero.matchAll(/<a\b[^>]*>/gi)];
 assert.equal(heroLinks.length,2,"Hero must contain exactly two actions");
 assert.match(hero,/href=["']#early-access["']/i);
