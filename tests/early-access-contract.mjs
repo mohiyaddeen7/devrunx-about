@@ -18,7 +18,8 @@ assert.match(html,/Role/i);
 assert.match(html,/What would you want DevRunX to monitor or control\?/i);
 assert.match(html,/external form provider/i,"Static site must disclose third-party form handling");
 
-assert.match(js,/https:\/\/tally\.so\//i,"Runtime must validate Tally URLs");
+assert.match(js,/parsed\.protocol\s*===\s*["']https:["']/i,"Runtime must require HTTPS for the form");
+assert.match(js,/parsed\.hostname\s*===\s*["']tally\.so["']/i,"Runtime must restrict the form host to tally.so");
 assert.match(js,/iframe/i,"Runtime must create an embedded form when configured");
 assert.match(js,/early-access-fallback/i,"Runtime must configure the fallback link");
 
