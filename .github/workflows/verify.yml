@@ -23,3 +23,5 @@ jobs:
         run: node tests/content-contract.mjs
       - name: Verify responsive accessibility
         run: node tests/responsive-accessibility-contract.mjs
+      - name: Verify early access
+        run: node tests/early-access-contract.mjs
