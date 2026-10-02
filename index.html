@@ -353,17 +353,22 @@ waiting for next task…</pre>
           <h2>Help shape what DevRunX becomes.</h2>
           <p>Early access is for people running work that continues when they are no longer in front of the machine — developers, founders, DevOps operators, and people working with AI agents.</p>
         </div>
-        <div class="form-awaiting" aria-label="Early access form integration">
-          <span class="form-state">External form</span>
-          <strong>Join early access</strong>
-          <p>The Tally signup will collect Email and Role, with optional Name and “What would you want DevRunX to monitor or control?”</p>
-          <p class="form-note">Responses will be handled by the external form provider; this static overview site does not store submissions.</p>
+        <div class="early-access-panel" data-early-access-embed aria-label="Early access form">
+          <div class="form-pending" data-form-pending>
+            <span class="form-state">External form</span>
+            <strong>Join early access</strong>
+            <p>The signup asks for <b>Email</b> and <b>Role</b>, with optional Name and “What would you want DevRunX to monitor or control?”</p>
+            <p class="form-note">Responses are handled by the external form provider; this static overview site does not store submissions.</p>
+            <p class="form-connection" data-form-state>The Tally form connection is pending.</p>
+            <a id="early-access-fallback" class="button form-link" href="#" hidden rel="noopener">Open early access form <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer><div class="shell">DevRunX · Public product overview · Platform under active development</div></footer>
+  <script src="site-config.js"></script>
   <script src="site.js" defer></script>
 </body>
 </html>
