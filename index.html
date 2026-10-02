@@ -3,45 +3,171 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DevRunX — Public Overview</title>
-  <meta name="description" content="DevRunX is being built to help you monitor long-running work and take controlled action from anywhere." />
+  <title>DevRunX — Know what your systems are doing</title>
+  <meta name="description" content="DevRunX is being built to help you monitor long-running work, understand what changed, and take controlled action from anywhere." />
+  <meta name="theme-color" content="#060a10" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <a href="#top">DevRunX</a>
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="#top" aria-label="DevRunX home">DevRun<span class="brand-x">X</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#what-it-does">What it does</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#use-cases">Use cases</a>
+        <a class="nav-cta" href="#early-access">Join early access</a>
+      </nav>
+    </div>
   </header>
+
   <main id="top">
-    <section>
-      <h1>Know what your systems are doing. Act when they need you.</h1>
-      <p>One place to observe long-running work, understand what changed, and take controlled action when intervention is needed.</p>
-      <a href="#early-access">Join early access</a>
-      <a href="#how-it-works">View how it works</a>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Remote operations for long-running work</p>
+          <h1 id="hero-title">Know what your systems are doing. <span>Act when they need you.</span></h1>
+          <p class="hero-lead">
+            DevRunX is being built as one place to observe long-running work, understand what changed,
+            and take controlled action across connected systems — without staying tied to the machine where the work started.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#early-access">Join early access <span aria-hidden="true">→</span></a>
+            <a class="button" href="#how-it-works">View how it works <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="hero-note">The platform is under active development. Product status is shown clearly below.</p>
+        </div>
+
+        <div class="dashboard-stage" aria-label="Illustrative DevRunX operational dashboard">
+          <div class="dashboard">
+            <aside class="dash-sidebar" aria-hidden="true">
+              <div class="dash-logo">DevRun<span class="brand-x">X</span></div>
+              <div class="dash-nav">
+                <span class="active"><i class="dot-icon"></i> Overview</span>
+                <span><i class="dot-icon"></i> Devices</span>
+                <span><i class="dot-icon"></i> Sessions</span>
+                <span><i class="dot-icon"></i> Processes</span>
+                <span><i class="dot-icon"></i> Events</span>
+                <span><i class="dot-icon"></i> Summaries</span>
+              </div>
+            </aside>
+            <div class="dash-main">
+              <div class="dash-top">
+                <strong class="dash-title">Operations</strong>
+                <div class="dash-state" aria-hidden="true">
+                  <span><i class="state-dot"></i> connected</span>
+                  <span>illustrative view</span>
+                </div>
+              </div>
+
+              <div class="dash-grid">
+                <section class="panel">
+                  <h3>Recent events</h3>
+                  <div class="event-list">
+                    <div class="event">
+                      <i class="event-mark ok"></i>
+                      <div class="event-copy"><strong>Build completed</strong><span>project workspace</span></div>
+                      <span class="event-time">now</span>
+                    </div>
+                    <div class="event">
+                      <i class="event-mark"></i>
+                      <div class="event-copy"><strong>Agent task started</strong><span>research workflow</span></div>
+                      <span class="event-time">recent</span>
+                    </div>
+                    <div class="event">
+                      <i class="event-mark warn"></i>
+                      <div class="event-copy"><strong>Process needs attention</strong><span>background worker</span></div>
+                      <span class="event-time">recent</span>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="panel">
+                  <h3>Active session</h3>
+                  <div class="session-list">
+                    <div class="session">
+                      <i class="event-mark ok"></i>
+                      <div><strong>dev-workstation</strong><span>terminal session</span></div>
+                      <span class="session-status">connected</span>
+                    </div>
+                    <div class="session">
+                      <i class="event-mark"></i>
+                      <div><strong>agent-run</strong><span>long-running task</span></div>
+                      <span class="session-status">observing</span>
+                    </div>
+                  </div>
+                  <h3 style="margin-top:16px">Quick actions</h3>
+                  <div class="quick-list">
+                    <span class="quick"><b class="quick-glyph">⌁</b> Inspect</span>
+                    <span class="quick"><b class="quick-glyph">↻</b> Restart</span>
+                    <span class="quick"><b class="quick-glyph">▣</b> Events</span>
+                    <span class="quick"><b class="quick-glyph">→</b> Action</span>
+                  </div>
+                </section>
+
+                <section class="panel terminal-mini">
+                  <div class="terminal-tabs"><span class="active">Terminal</span><span>Events</span><span>Summary</span></div>
+                  <pre class="terminal-body"><span class="cyan">dev@workstation:~/project $</span> npm run build
+building application…
+<span class="ok">✓ build completed successfully</span>
+waiting for next task…</pre>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="how-it-works">
-      <h2>How it works</h2>
-      <p>Connect. Observe. Act.</p>
+    <section class="system-strip" aria-label="DevRunX platform direction">
+      <div class="shell system-strip-inner">
+        <div class="system-item">
+          <span class="system-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg></span>
+          <strong>Computers &amp; devices</strong><span>workstations and devices</span>
+        </div>
+        <div class="system-item">
+          <span class="system-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg></span>
+          <strong>Servers</strong><span>remote runtimes</span>
+        </div>
+        <div class="system-item">
+          <span class="system-icon" aria-hidden="true"><rect x="5" y="7" width="14" height="11" rx="3"/><path d="M9 11h.01M15 11h.01M9 15h6M12 7V4M9 4h6"/></svg></span>
+          <strong>AI agents</strong><span>long-running agent work</span>
+        </div>
+        <div class="system-item">
+          <span class="system-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg></span>
+          <strong>Applications</strong><span>processes and jobs</span>
+        </div>
+        <div class="system-item">
+          <span class="system-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .7-7.94A6 6 0 0 0 6.2 8.5 4.5 4.5 0 0 0 7 18Z"/></svg></span>
+          <strong>Cloud services</strong><span>services and deployments</span>
+        </div>
+        <div class="system-item">
+          <span class="system-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="m8 11 8-4M8 13l8 4"/></svg></span>
+          <strong>Automations</strong><span>scheduled and event-driven</span>
+        </div>
+        <div class="system-item">
+          <span class="system-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 7H6a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3h3M15 7h3a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-3M8 12h8"/></svg></span>
+          <strong>APIs / tools</strong><span>future integrations</span>
+        </div>
+      </div>
+      <p class="system-disclaimer">These categories show the intended platform boundary; they do not imply every connector is available today.</p>
     </section>
 
-    <section id="available">
-      <h2>Available foundation</h2>
-      <p>Account, device, session, pairing, and rate-limiting foundations are present in the current codebase.</p>
-    </section>
-
-    <section id="in-development">
-      <h2>In development</h2>
-      <p>Realtime visibility, remote-control surfaces, richer device management, summaries, recovery, dashboards, and notifications are still being built.</p>
-    </section>
-
-    <section id="future">
-      <h2>Future</h2>
-      <p>Broader source-agnostic connectors and orchestration remain platform direction rather than shipped capability.</p>
-    </section>
-
-    <section id="early-access">
-      <h2>Join early access</h2>
-      <p>The embedded early-access form will be connected here.</p>
-    </section>
+    <section id="what-it-does" class="section"><div class="shell status-placeholder"><p class="section-kicker">What it does</p><h2>Monitor. Control. Keep work moving.</h2><p>Detailed product explanation follows below.</p></div></section>
+    <section id="how-it-works" class="section"><div class="shell status-placeholder"><p class="section-kicker">How it works</p><h2>Connect. Observe. Act.</h2><p>Connect supported systems, understand activity, then take a controlled action when needed.</p></div></section>
+    <section id="features" class="section"><div class="shell status-placeholder"><p class="section-kicker">Features</p><h2>Built around operational context.</h2><p>Feature detail follows in the product-status section.</p></div></section>
+    <section id="roadmap" class="section"><div class="shell">
+      <section id="available" class="status-placeholder"><h2>Available foundation</h2><p>Account, device, session, pairing, and rate-limiting foundations are present in the current codebase.</p></section>
+      <section id="in-development" class="status-placeholder"><h2>In development</h2><p>Realtime visibility, remote-control surfaces, richer device management, summaries, recovery, dashboards, and notifications are still being built.</p></section>
+      <section id="future" class="status-placeholder"><h2>Future</h2><p>Broader source-agnostic connectors and orchestration remain platform direction rather than shipped capability.</p></section>
+    </div></section>
+    <section id="use-cases" class="section"><div class="shell status-placeholder"><p class="section-kicker">Use cases</p><h2>Stay in the loop when work keeps running.</h2></div></section>
+    <section id="early-access" class="section"><div class="shell status-placeholder"><p class="section-kicker">Early access</p><h2>Join early access</h2><p>The embedded external signup form will live here.</p></div></section>
   </main>
+
+  <footer><div class="shell">DevRunX · Public product overview · Platform under active development</div></footer>
 </body>
 </html>
