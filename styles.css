@@ -271,9 +271,9 @@ footer{padding:28px 0;color:#687b8d;font-size:11px}
 .early-access-section{padding-bottom:110px}
 .early-access-shell{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.85fr);gap:80px;align-items:start}
 .early-access-shell>div:first-child>p:not(.section-kicker){max-width:650px;font-size:14px}
-.form-awaiting{padding:26px 0;border-top:1px solid var(--line-bright);border-bottom:1px solid var(--line-bright)}
-.form-awaiting .form-state{display:block;margin-bottom:12px;color:var(--accent);font-size:9px;text-transform:uppercase;letter-spacing:.14em;font-weight:800}
-.form-awaiting strong{font-size:20px}.form-awaiting p{font-size:12px;margin:12px 0 0}.form-awaiting .form-note{font-size:10px;color:#62768a}
+.early-access-panel{padding:26px 0;border-top:1px solid var(--line-bright);border-bottom:1px solid var(--line-bright)}
+.early-access-panel .form-state{display:block;margin-bottom:12px;color:var(--accent);font-size:9px;text-transform:uppercase;letter-spacing:.14em;font-weight:800}
+.early-access-panel strong{font-size:20px}.early-access-panel p{font-size:12px;margin:12px 0 0}.early-access-panel .form-note{font-size:10px;color:#62768a}
 
 
 .nav-toggle{
@@ -388,3 +388,9 @@ footer{padding:28px 0;color:#687b8d;font-size:11px}
   *,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
   .button:hover{transform:none}
 }
+
+.early-access-panel{min-height:280px}
+.form-pending{padding:26px 0}
+.form-connection{padding-top:12px;border-top:1px solid var(--line);color:#7d92a6!important}
+.form-link{margin-top:16px;min-height:40px}
+.tally-frame{display:block;width:100%;min-height:520px;border:0;background:transparent}
