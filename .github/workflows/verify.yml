@@ -21,3 +21,5 @@ jobs:
         run: node tests/visual-contract.mjs
       - name: Verify content contract
         run: node tests/content-contract.mjs
+      - name: Verify responsive accessibility
+        run: node tests/responsive-accessibility-contract.mjs
