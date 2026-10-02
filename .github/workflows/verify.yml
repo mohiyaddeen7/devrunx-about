@@ -19,3 +19,5 @@ jobs:
         run: node tests/architecture-contract.mjs
       - name: Verify visual contract
         run: node tests/visual-contract.mjs
+      - name: Verify content contract
+        run: node tests/content-contract.mjs
