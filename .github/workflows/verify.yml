@@ -1,0 +1,27 @@
+name: Verify public overview
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Verify product truth
+        run: node tests/product-truth-contract.mjs
+      - name: Verify architecture
+        run: node tests/architecture-contract.mjs
+      - name: Verify visual contract
+        run: node tests/visual-contract.mjs
+      - name: Verify content contract
+        run: node tests/content-contract.mjs
+      - name: Verify responsive accessibility
+        run: node tests/responsive-accessibility-contract.mjs
+      - name: Verify early access
+        run: node tests/early-access-contract.mjs
